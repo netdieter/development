@@ -1,0 +1,1 @@
+Maven geht über run as Maven-Install. Das erzeugt das Projekt/Jar-File
