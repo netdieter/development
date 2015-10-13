@@ -28,13 +28,11 @@ import devplugin.Version;
  *
  */
 public class BongTVPlugin extends Plugin {
-	private static final Logger mLog
-    = Logger.getLogger(BongTVPlugin.class.getName());
+	private static final Logger mLog = Logger.getLogger(BongTVPlugin.class.getName());
 	
 	private static Version version = new  Version (1, 3, false);
 	private static BongTVPlugin mInstance;
-	protected static final util.ui.Localizer mLocalizer = util.ui.Localizer
-			.getLocalizerFor(BongTVPlugin.class);
+	protected static final util.ui.Localizer mLocalizer = util.ui.Localizer	.getLocalizerFor(BongTVPlugin.class);
 	private static BongTVData mBongTVData = new BongTVData();
 	
 	private static BongTVChannelMap channelMap = new BongTVChannelMap();
