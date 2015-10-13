@@ -31,19 +31,16 @@ public class BongTVPlugin extends Plugin {
 	private static final Logger mLog
     = Logger.getLogger(BongTVPlugin.class.getName());
 	
-	private static Version version = new  Version (1, 2, false);
+	private static Version version = new  Version (1, 3, false);
 	private static BongTVPlugin mInstance;
-	private ConfigurationHandler mConfigurationHandler;
 	protected static final util.ui.Localizer mLocalizer = util.ui.Localizer
 			.getLocalizerFor(BongTVPlugin.class);
-	private static final String DATAFILE_PREFIX = "bongtvplugin.BongTVPlugin";
 	private static BongTVData mBongTVData = new BongTVData();
 	
 	private static BongTVChannelMap channelMap = new BongTVChannelMap();
 	
 	public BongTVPlugin() {
 		mInstance = this;
-		mConfigurationHandler = new ConfigurationHandler(DATAFILE_PREFIX);
 	}
 
 	
@@ -82,8 +79,7 @@ public class BongTVPlugin extends Plugin {
 		    	if(channelMap.containsKey(cannelId)){
 		    		int cannel = channelMap.get(cannelId);
 		    		BongTVService.setBonguser(mBongTVData);
-		    		if(BongTVService.getInstance()
-		    				.recordProgram(title, date.getFormattedString("dd-MM-yyyy"), startTime, cannel)){
+		    		if(BongTVService.getInstance().recordProgram(title, date.getFormattedString("dd-MM-yyyy"), startTime, cannel)){
 		    			program.mark(BongTVPlugin.getInstance());
 		    			program.validateMarking();
 		    		} else {
