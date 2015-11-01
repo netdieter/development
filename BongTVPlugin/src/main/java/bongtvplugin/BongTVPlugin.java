@@ -94,8 +94,9 @@ public class BongTVPlugin extends Plugin {
 		  // Enable menue only for channels provided by Bong.tv and User is validated
 		  if( !mBongTVData.isValid() ||
 		      program == null || 
+			  program.getChannel() == null || 
+			  program.getChannel().getName().equals("Channel 1") ||
 			  !channelMap.containsKey(program.getChannel().getUniqueId())){
-			  mLog.info(program.getChannel().getName() + " disabled due to not found in ChanelMap");
 			  action.setEnabled(false);
 		  }
 		  // Der Aktion einen Namen geben. Dieser Name wird dann im Kontextmenü gezeigt
