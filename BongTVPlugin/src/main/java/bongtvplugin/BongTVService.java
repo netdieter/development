@@ -126,7 +126,7 @@ public class BongTVService {
 	private String findProgrammId(String title, String date, String start, int cannel){
 		Long progID = null;
 		JSONParser parser;
-		JSONArray jsonArray; 
+		JSONObject jsonObject; 
 		
 		try {
 //			URI  uri = new URI("http://www.bong.tv/service/broadcasts/search," +
@@ -143,13 +143,21 @@ public class BongTVService {
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String strResponse = httpclient.execute(httpget, responseHandler);
 			parser = new JSONParser();
-			jsonArray = (JSONArray)parser.parse(strResponse);
+			jsonObject = (JSONObject)parser.parse(strResponse);
 			// Bei Mehrfachauswahl wird per start Time die richtige ID gesucht
-			for(Object jobj :jsonArray){
+//			for(Object jobj :jsonObject){
+//				JSONObject job = (JSONObject)jobj;
+//				if(((String)jsonObject.get("start_time")).equals(start))
+//					progID = (Long)jsonObject.get("id");
+//			}
+			
+			JSONArray jsArray = (JSONArray)jsonObject.get("broadcasts");
+			for(Object jobj :jsArray){
 				JSONObject job = (JSONObject)jobj;
 				if(((String)job.get("start_time")).equals(start))
 					progID = (Long)job.get("id");
 			}
+			
 			if(progID != null)
 				return progID.toString();
 			else
