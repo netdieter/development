@@ -3,22 +3,32 @@
  */
 package de.engelhardt.sandbox;
 
-import java.awt.Container;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
 
+import com.jgoodies.binding.adapter.ComboBoxAdapter;
+import com.jgoodies.binding.beans.BeanAdapter;
+import com.jgoodies.binding.value.ValueModel;
 import com.jgoodies.forms.builder.FormBuilder;
 
+import de.engelhardt.binding.ComboBoxListObject;
+import de.engelhardt.binding.TestBean;
 import de.engelhardt.tools.TextAreaOutputStream;
 
 /**
@@ -29,30 +39,48 @@ public class MainGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextArea textArea = new JTextArea(15, 30);
 	private TextAreaOutputStream taOutputStream = new TextAreaOutputStream(textArea, "Out");
-	private JScrollPane jsptest =  new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
+	private JScrollPane jsptest =  new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
 	           JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	private JButton btnSetValue = new JButton("Set");
+	private JLabel lblAnzeige = new JLabel("-Test-");
 
-
+	private TestBean testBean = new TestBean();
+	private BeanAdapter<TestBean> beanAdapter = new BeanAdapter<TestBean>(testBean);
+	private ValueModel selectionHolder = beanAdapter.getValueModel("cbobj");
+	private int testId;
+	
 	public static void main(String[] args) {
 				new MainGUI();
 	}
 
 	public MainGUI() throws HeadlessException {
 		super();
-		this.setTitle("Meine Spielwiese für diverse Experimente");
-		this.setSize(600, 400);
-		this.setLocationRelativeTo(null);
-		this.setJMenuBar(buildMenuBar());
-		this.setContentPane(buildStartupContent());
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setTitle("Meine Spielwiese für diverse Experimente");
+		setSize(600, 400);
+		setLocationRelativeTo(null);
+		setJMenuBar(buildMenuBar());
+		setContentPane(buildStartupContent());
+		initComponents();
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		System.setOut(new PrintStream(taOutputStream));
-		this.pack();
-		this.setVisible(true);
+		pack();
+		setVisible(true);
 		System.out.println("Hier gehts los");
-		LongExecutionTask let = new LongExecutionTask();
-		let.run();
+//		LongExecutionTask let = new LongExecutionTask();
+//		let.run();
 	}
 
+	private void initComponents(){
+		btnSetValue.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				testId = (testId ++)%6;
+				testBean.setId(testId);
+			}
+			
+		});
+	}
 	private JMenuBar buildMenuBar() {
 		JMenuBar menuBar;
 		JMenu menu, submenu;
@@ -96,13 +124,36 @@ public class MainGUI extends JFrame {
 		return menuBar;
 	}
 	
-	private Container buildStartupContent() {
+	private JPanel buildStartupContent() {
 	      return FormBuilder.create()
 	    		  .columns("left:90dlu, 3dlu, 200dlu")
-	    		  .rows("p, 3dlu, p, 3dlu")
+	    		  .rows("p, 3dlu, p, 3dlu, p")
 	    		  .addLabel("Soderla").xy(3, 1)
 	    		  .add(jsptest).xyw(1,  3, 3)
+	    		  .add(buildComboBoxPanel()).xyw(1, 5, 3)
 	    		  .build();
 	}
-
+	
+	private JPanel buildComboBoxPanel(){
+		return FormBuilder.create()
+				.columns("fill:100dlu, 3dlu, pref, 3dlu, left:pref")
+				.rows("pref")
+				.add(createJComboBox()).xy(1, 1)
+				.add(btnSetValue).xy(3, 1)
+				.add(lblAnzeige).xy(5, 1)
+				.build();
+		
+	}
+	
+	private JComboBox<ComboBoxListObject> createJComboBox() {
+		ArrayList<ComboBoxListObject> list = new ArrayList<ComboBoxListObject>();
+		list.add(new ComboBoxListObject(1, "Das erste Element"));
+		list.add(new ComboBoxListObject(2, "Das zweite Element"));
+		list.add(new ComboBoxListObject(3, "Das dritte Element"));
+		list.add(new ComboBoxListObject(4, "Das vierte Element"));
+		list.add(new ComboBoxListObject(5, "Das fünfte Element"));
+		JComboBox<ComboBoxListObject> box = new JComboBox<ComboBoxListObject>(new ComboBoxAdapter<ComboBoxListObject>(list, selectionHolder));
+//		box.setModel(new DefaultComboBoxModel(list.toArray()));
+		return box;
+	}
 }
