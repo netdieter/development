@@ -38,4 +38,23 @@ public class ComboBoxListObject {
 		return value;
 	}
 
+	@Override
+	//TODO: Seltsam hier
+	public boolean equals(Object obj) {
+		if(obj instanceof  ComboBoxListObject){
+			System.out.println(this.toString());
+			if(this.getId() == ((ComboBoxListObject)obj).getId()){
+				return true;
+			} 
+		}
+		if(obj instanceof  Integer){
+			if(this.getId() == (Integer)obj){
+				return true;
+			} 
+		}
+		return false;
+	}
+	
+	
+
 }

@@ -22,8 +22,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
 
-import com.jgoodies.binding.adapter.ComboBoxAdapter;
+import com.jgoodies.binding.adapter.BasicComponentFactory;
 import com.jgoodies.binding.beans.BeanAdapter;
+import com.jgoodies.binding.list.SelectionInList;
 import com.jgoodies.binding.value.ValueModel;
 import com.jgoodies.forms.builder.FormBuilder;
 
@@ -39,15 +40,15 @@ public class MainGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextArea textArea = new JTextArea(15, 30);
 	private TextAreaOutputStream taOutputStream = new TextAreaOutputStream(textArea, "Out");
-	private JScrollPane jsptest =  new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
-	           JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	private JScrollPane jsptest =  new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	private JButton btnSetValue = new JButton("Set");
 	private JLabel lblAnzeige = new JLabel("-Test-");
 
 	private TestBean testBean = new TestBean();
-	private BeanAdapter<TestBean> beanAdapter = new BeanAdapter<TestBean>(testBean);
+	private BeanAdapter<TestBean> beanAdapter = new BeanAdapter<TestBean>(testBean, true);
 	private ValueModel selectionHolder = beanAdapter.getValueModel("cbobj");
-	private int testId;
+	private ValueModel indexHolder = beanAdapter.getValueModel("id");
+	private Integer testId = new Integer(1);
 	
 	public static void main(String[] args) {
 				new MainGUI();
@@ -77,6 +78,7 @@ public class MainGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				testId = (testId ++)%6;
 				testBean.setId(testId);
+//				testBean.setCbobj(new ComboBoxListObject(3, "Das dritte Element"));
 			}
 			
 		});
@@ -152,8 +154,17 @@ public class MainGUI extends JFrame {
 		list.add(new ComboBoxListObject(3, "Das dritte Element"));
 		list.add(new ComboBoxListObject(4, "Das vierte Element"));
 		list.add(new ComboBoxListObject(5, "Das fünfte Element"));
-		JComboBox<ComboBoxListObject> box = new JComboBox<ComboBoxListObject>(new ComboBoxAdapter<ComboBoxListObject>(list, selectionHolder));
-//		box.setModel(new DefaultComboBoxModel(list.toArray()));
+		SelectionInList<ComboBoxListObject> selli = new SelectionInList<ComboBoxListObject>(list, selectionHolder, indexHolder);
+		JComboBox<ComboBoxListObject> box = BasicComponentFactory.createComboBox(selli);
+		
+		box.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lblAnzeige.setText(testBean.getCbobj().toString());
+			}
+		});
+
+		//		box.setModel(new DefaultComboBoxModel(list.toArray()));
 		return box;
 	}
 }
