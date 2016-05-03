@@ -9,7 +9,7 @@ import ro.fortsoft.pf4j.DefaultPluginManager;
 import ro.fortsoft.pf4j.PluginManager;
 
 
-public class Main extends Application {
+public class Launcer extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
