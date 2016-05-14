@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Dieter
+Build-Jdk: 1.8.0
+Plugin-Class: de.engelhardt.plugin.demo1
+Plugin-Dependencies: x, y, z
+Plugin-Id: welcome-plugin
+Plugin-Provider: Dieter Engelhardt
+Plugin-Version: 0.0.1
