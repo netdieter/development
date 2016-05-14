@@ -13,7 +13,9 @@ public class Launcer extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("PluginAppFx.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("PluginAppFx.fxml"));
+			BorderPane root = (BorderPane)loader.load();
+			
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
