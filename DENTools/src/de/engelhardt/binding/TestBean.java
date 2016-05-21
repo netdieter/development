@@ -3,9 +3,6 @@
  */
 package de.engelhardt.binding;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-
 import com.jgoodies.binding.beans.Model;
 
 /**

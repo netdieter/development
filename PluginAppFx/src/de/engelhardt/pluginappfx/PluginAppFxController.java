@@ -9,6 +9,7 @@ public class PluginAppFxController {
 	
 	
 	public PluginAppFxController() {
+		
 //		try {
 //			FXMLLoader loader = new FXMLLoader(getClass().getResource("PluginAppFx.fxml"));
 //			loader.setRoot(this);
