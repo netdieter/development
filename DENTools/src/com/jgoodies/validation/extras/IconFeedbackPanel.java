@@ -511,7 +511,6 @@
       */
      private final class ValidationResultChangeHandler implements PropertyChangeListener {
  
-         @Override
          public void propertyChange(PropertyChangeEvent evt) {
              updateFeedbackComponents();
          }
@@ -539,7 +538,6 @@
           * @param name the string to be associated with the component
           * @param comp the component to be added
           */
-         @Override
          public void addLayoutComponent(String name, Component comp) {
              // components are well known by the container
          }
@@ -548,7 +546,6 @@
           * Removes the specified component from the layout.
           * @param comp the component to be removed
           */
-         @Override
          public void removeLayoutComponent(Component comp) {
              // components are well known by the container
          }
@@ -561,7 +558,6 @@
           * @return the preferred size of the given container
           * @see #minimumLayoutSize(Container)
           */
-         @Override
          public Dimension preferredLayoutSize(Container parent) {
              return content(parent).getPreferredSize();
          }
@@ -574,7 +570,6 @@
           * @return the minimum size of the given container
           * @see #preferredLayoutSize(Container)
           */
-         @Override
          public Dimension minimumLayoutSize(Container parent) {
              return content(parent).getMinimumSize();
          }
@@ -584,7 +579,6 @@
           *
           * @param parent the container to be laid out
           */
-         @Override
          public void layoutContainer(Container parent) {
              Dimension size = parent.getSize();
              content(parent).setBounds(0, 0, size.width, size.height);

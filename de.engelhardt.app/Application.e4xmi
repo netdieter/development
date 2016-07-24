@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_gwyyYUoIEeage56BHv27Iw" elementId="org.eclipse.e4.application" bindingContexts="_gwyyYEoIEeage56BHv27Iw">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_FtMsYEoMEeage56BHv27Iw" elementId="de.engelhardt.app.trimmedwindow.sandbox" label="Sandbox" x="400" y="400" width="1000" height="800">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_YCQWsE9zEeawnPlR1KmLTQ" elementId="de.engelhardt.app.partsashcontainer.0" horizontal="true">
+      <children xsi:type="basic:Part" xmi:id="_QNlyYFA1EeaTCaXNz2b8OA" elementId="de.engelhardt.app.part.navi" containerData="30" contributionURI="bundleclass://de.engelhardt.app/de.engelhardt.part.NaviPart" label="Navigation"/>
+      <children xsi:type="basic:PartStack" xmi:id="_fgwIkE9zEeawnPlR1KmLTQ" elementId="de.engelhardt.app.partstack.main" containerData="70">
+        <children xsi:type="basic:Part" xmi:id="_Q5aSYFA8EeaTCaXNz2b8OA" elementId="de.engelhardt.app.part.main" contributionURI="bundleclass://de.engelhardt.app/de.engelhardt.part.MainPart" label="Main-Part"/>
+      </children>
+    </children>
+    <mainMenu xmi:id="_LtBg0EoMEeage56BHv27Iw" elementId="de.engelhardt.app.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_NviyMEoMEeage56BHv27Iw" elementId="de.engelhardt.app.menu.file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_QA2tgEoMEeage56BHv27Iw" elementId="de.engelhardt.app.handledmenuitem.exit" label="Exit" command="_a01NcEoMEeage56BHv27Iw"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_2WnwMFA7EeaTCaXNz2b8OA" elementId="de.engelhardt.app.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_3KD_UFA7EeaTCaXNz2b8OA" elementId="de.engelhardt.app.toolbar.0"/>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_oaFiMEoMEeage56BHv27Iw" elementId="de.engelhardt.app.handler.0" contributionURI="bundleclass://de.engelhardt.app/de.engelhardt.handlers.QuitHandler" command="_a01NcEoMEeage56BHv27Iw"/>
+  <rootContext xmi:id="_gwyyYEoIEeage56BHv27Iw" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_gwyyYkoIEeage56BHv27Iw" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_gwyyY0oIEeage56BHv27Iw" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_a01NcEoMEeage56BHv27Iw" elementId="de.engelhardt.app.command.quit" commandName="Quit" category="_enHMQEoMEeage56BHv27Iw"/>
+  <addons xmi:id="_gwyyZEoIEeage56BHv27Iw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_gwyyZUoIEeage56BHv27Iw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_gwyyZkoIEeage56BHv27Iw" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_gwyyZ0oIEeage56BHv27Iw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_gwyyaEoIEeage56BHv27Iw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_gwyyaUoIEeage56BHv27Iw" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_gwyyakoIEeage56BHv27Iw" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <categories xmi:id="_enHMQEoMEeage56BHv27Iw" elementId="de.engelhardt.app.category.basics" name="Basics"/>
+</application:Application>

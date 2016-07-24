@@ -74,7 +74,6 @@ public class MainGUI extends JFrame {
 	private void initComponents(){
 		btnSetValue.addActionListener(new ActionListener(){
 
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				testId = (testId ++)%6;
 				testBean.setId(testId);
@@ -158,7 +157,6 @@ public class MainGUI extends JFrame {
 		JComboBox<ComboBoxListObject> box = BasicComponentFactory.createComboBox(selli);
 		
 		box.addActionListener(new ActionListener(){
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				lblAnzeige.setText(testBean.getCbobj().toString());
 			}
