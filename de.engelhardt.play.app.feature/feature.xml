@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-	id="de.engelhardt.play.app.feature"
-	label="Playground Application Feature"
-	version="1.0.0.qualifier"
-	provider-name="Engelhardt"
-	>
-		<description url="http://www.efxclipse.org">
-			TODO FILL WITH CONTENT
-		</description>
+      id="de.engelhardt.play.app.feature"
+      label="Playground Application Feature"
+      version="1.0.0.qualifier"
+      provider-name="Engelhardt">
 
-		<copyright url="http://www.efxclipse.org">
-			TODO FILL WITH CONTENT
-		</copyright>
+   <description url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </description>
 
-		<license url="http://www.efxclipse.org">
-			TODO FILL WITH CONTENT
-		</license>
+   <copyright url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </copyright>
 
-   		<plugin id="de.engelhardt.play.app" install-size="0" version="0.0.0" unpack="false" />
+   <license url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </license>
 
+   <plugin
+         id="de.engelhardt.play.app"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.engelhardt.play.log4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
 
 </feature>

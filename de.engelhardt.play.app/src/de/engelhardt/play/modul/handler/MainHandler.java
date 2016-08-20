@@ -26,6 +26,7 @@ public class MainHandler {
 	
 	@PostConstruct
 	public void postConstruct(BorderPane parent, @LocalInstance FXMLLoader loader) {
+		logger.debug("MainHandler");
 		loader.setLocation(getClass().getResource("/fxml/modul/Main.fxml"));
 		try {
 			parent.setCenter(loader.load());
