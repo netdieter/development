@@ -8,7 +8,7 @@
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Button fx:id="btnDialog" mnemonicParsing="false" text="Dialog" />
+            <Button fx:id="btnDialog" mnemonicParsing="false" onAction="#handleDialog" text="Dialog" />
          </children>
       </VBox>
    </children>

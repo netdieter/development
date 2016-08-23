@@ -5,9 +5,10 @@
       <children xsi:type="advanced:Perspective" xmi:id="_kZrM8Gb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.perspective.defaultperspektive" label="Default Perspektive">
         <children xsi:type="basic:PartSashContainer" xmi:id="_pr8-4Gb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.partsashcontainer.0" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_vGFsUGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_xXFekGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.part.playgroundcontroll" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.modul.handler.MainHandler" label="Playground Control"/>
+            <children xsi:type="basic:Part" xmi:id="_xXFekGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.part.playgroundcontroll" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.modul.handler.MainHandler" label=""/>
           </children>
         </children>
+        <windows xsi:type="basic:Dialog" xmi:id="_h22lsGcLEeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.dialog.testdialog" label="TestDialog" width="200" height="200"/>
       </children>
     </children>
     <mainMenu xmi:id="_47zfIGb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.menu.0">
@@ -21,6 +22,7 @@
     <children xmi:id="_oDM1Mmb1Eeaxk7eCPQhB3w" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_oDM1M2b1Eeaxk7eCPQhB3w" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
+  <snippets xsi:type="basic:Dialog" xmi:id="_mO6nkGcKEeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.dialog.0"/>
   <commands xmi:id="_A8rlUGb4EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.command.exitcommand" commandName="ExitCommand" description="Raus hier" category="_GpL1IGb4EeaWi4TfoDKZNQ"/>
   <addons xmi:id="_oDM1NGb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_oDM1NWb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
