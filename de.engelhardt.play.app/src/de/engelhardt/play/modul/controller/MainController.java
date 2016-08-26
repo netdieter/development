@@ -41,8 +41,4 @@ public class MainController {
         assert btnDialog != null : "fx:id=\"btnDialog\" was not injected: check your FXML file 'Main.fxml'.";
 
     }
-    @FXML
-    void handleDialog(){
-    	
-    }
 }

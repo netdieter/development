@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_oDM1MWb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.application" bindingContexts="_oDM1MGb1Eeaxk7eCPQhB3w">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_zh_h0Gb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.trimmedwindow.playground" label="Playground" width="500" height="500">
-    <children xsi:type="advanced:PerspectiveStack" xmi:id="_jTjSYGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.perspectivestack.0">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_jTjSYGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.perspectivestack.play">
       <children xsi:type="advanced:Perspective" xmi:id="_kZrM8Gb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.perspective.defaultperspektive" label="Default Perspektive">
         <children xsi:type="basic:PartSashContainer" xmi:id="_pr8-4Gb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.partsashcontainer.0" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_vGFsUGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_xXFekGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.part.playgroundcontroll" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.modul.handler.MainHandler" label=""/>
+            <children xsi:type="basic:Part" xmi:id="_xXFekGb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.part.playgroundcontroll" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.modul.handler.MainHandler" label="Navigation"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_-txnIGvAEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partstack.1">
+            <children xsi:type="basic:Part" xmi:id="__sXWUGvAEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.mainpart" label="MainPart"/>
           </children>
         </children>
-        <windows xsi:type="basic:Dialog" xmi:id="_h22lsGcLEeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.dialog.testdialog" label="TestDialog" width="200" height="200"/>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_bSwDgGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.perspective.alt" label="Alternative">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_hIUvwGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partsashcontainer.alt">
+          <children xsi:type="basic:PartStack" xmi:id="_jjysoGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partstack.alt.top">
+            <children xsi:type="basic:Part" xmi:id="_lfouQGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.alttop" label="Alt Top"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_n6-vUGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partstack.alt.bottom">
+            <children xsi:type="basic:Part" xmi:id="_ppZY8GvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.altbottom" label="AltBottom"/>
+          </children>
+        </children>
       </children>
     </children>
     <mainMenu xmi:id="_47zfIGb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.menu.0">
@@ -16,14 +28,27 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_9kVJcGb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.handledmenuitem.exit" label="Exit" command="_A8rlUGb4EeaWi4TfoDKZNQ"/>
       </children>
     </mainMenu>
+    <trimBars xmi:id="_J9zJ4GvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_LdroQGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Rdsp8GvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.handledtoolitem.handlestoolitem" label="SwitchAltPerspective" command="_bImMgGvCEeapZNljU9P_Eg"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_VbdgAGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.directtoolitem.directtoolitem" label="SwitchDefaultPerspective" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.handler.SwitchDefaultPerspective"/>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_4S1xwGvFEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.toolcontrol.spacer">
+        <tags>stretch</tags>
+      </children>
+    </trimBars>
   </children>
   <handlers xmi:id="_OxKB0Gb4EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.handler.exit" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.handler.ExitHandler" command="_A8rlUGb4EeaWi4TfoDKZNQ"/>
+  <handlers xmi:id="_r5zf4GvCEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.handler.switchdefault" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.handler.SwitchDefaultPerspective" command="_jYu2sGvCEeapZNljU9P_Eg"/>
+  <handlers xmi:id="_Fs1ZEGvDEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.handler.1" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.handler.SwitchAltPerspective" command="_bImMgGvCEeapZNljU9P_Eg"/>
   <rootContext xmi:id="_oDM1MGb1Eeaxk7eCPQhB3w" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_oDM1Mmb1Eeaxk7eCPQhB3w" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_oDM1M2b1Eeaxk7eCPQhB3w" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
   <snippets xsi:type="basic:Dialog" xmi:id="_mO6nkGcKEeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.dialog.0"/>
   <commands xmi:id="_A8rlUGb4EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.command.exitcommand" commandName="ExitCommand" description="Raus hier" category="_GpL1IGb4EeaWi4TfoDKZNQ"/>
+  <commands xmi:id="_bImMgGvCEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.command.switchperspectivealt" commandName="SwitchPerspectiveAlt" description="Switch to Alt" category="_RsVGYGvCEeapZNljU9P_Eg"/>
+  <commands xmi:id="_jYu2sGvCEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.command.switchdefault" commandName="SwitchDefault" description="Switch Default" category="_RsVGYGvCEeapZNljU9P_Eg"/>
   <addons xmi:id="_oDM1NGb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_oDM1NWb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_oDM1Nmb1Eeaxk7eCPQhB3w" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
@@ -32,4 +57,5 @@
   <addons xmi:id="_oDM1OWb1Eeaxk7eCPQhB3w" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
   <addons xmi:id="_oDM1Omb1Eeaxk7eCPQhB3w" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <categories xmi:id="_GpL1IGb4EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.category.common" name="Common" description="Standart Commands"/>
+  <categories xmi:id="_RsVGYGvCEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.category.play" name="PlayCommand" description="Alle Command die zur Spielwiese gehören"/>
 </application:Application>
