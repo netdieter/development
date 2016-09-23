@@ -17,6 +17,33 @@
       TODO FILL WITH CONTENT
    </license>
 
+   <requires>
+      <import plugin="org.apache.log4j"/>
+      <import plugin="org.eclipse.fx.ui.workbench.fx"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench"/>
+      <import plugin="org.eclipse.e4.core.services"/>
+      <import plugin="org.eclipse.e4.core.di"/>
+      <import plugin="org.eclipse.e4.ui.di"/>
+      <import plugin="org.eclipse.e4.core.di.extensions"/>
+      <import plugin="org.eclipse.fx.ui.theme"/>
+      <import plugin="org.eclipse.fx.ui.di"/>
+      <import plugin="org.eclipse.e4.core.contexts"/>
+      <import plugin="org.eclipse.fx.core.databinding"/>
+      <import plugin="org.eclipse.fx.ui.databinding"/>
+      <import plugin="org.eclipse.core.databinding"/>
+      <import plugin="org.eclipse.core.databinding.observable"/>
+      <import plugin="org.eclipse.core.databinding.property"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.e4.ui.services"/>
+      <import plugin="org.eclipse.fx.core" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.fx.ui.services"/>
+      <import plugin="org.eclipse.fx.core.di" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.fx.core.di.context" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.controlsfx" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="javax.inject"/>
+      <import plugin="javax.annotation.jre"/>
+   </requires>
+
    <plugin
          id="de.engelhardt.play.app"
          download-size="0"

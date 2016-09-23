@@ -5,7 +5,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_kZrM8Gb5EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.perspective.defaultperspektive" label="Default Perspektive">
         <children xsi:type="basic:PartSashContainer" xmi:id="_hIUvwGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partsashcontainer.alt">
           <children xsi:type="basic:PartStack" xmi:id="_jjysoGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partstack.alt.top">
-            <children xsi:type="basic:Part" xmi:id="_lfouQGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.alttop" label="Alt Top"/>
+            <children xsi:type="basic:Part" xmi:id="_lfouQGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.alttop" contributionURI="bundleclass://de.engelhardt.play.app/de.engelhardt.play.handler.PartTop" label="Alt Top"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_n6-vUGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.partstack.alt.bottom">
             <children xsi:type="basic:Part" xmi:id="_ppZY8GvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.part.altbottom" label="AltBottom"/>
