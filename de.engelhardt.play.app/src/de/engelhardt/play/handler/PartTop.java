@@ -23,7 +23,7 @@ public class PartTop {
 	
 	@PostConstruct
 	public void postConstruct(BorderPane parent, @LocalInstance FXMLLoader loader) {
-		loader.setLocation(getClass().getResource("resources.fxml.modul.Test.fxml"));
+		loader.setLocation(getClass().getResource("/resources/fxml/modul/Test.fxml"));
 		logger.debug("NaviPart");
 		try {
 			parent.setCenter(loader.load());
