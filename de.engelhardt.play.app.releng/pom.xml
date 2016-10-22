@@ -14,7 +14,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<properties>
-		<tycho-version>0.23.1</tycho-version>
+		<tycho-version>0.26.0</tycho-version>
 		<junit-version>4.11</junit-version>
 		<mockito-version>1.8.4</mockito-version>
 		<platform-version>4.2</platform-version>
@@ -26,6 +26,8 @@
 		<module>../de.engelhardt.play.app</module>
 		<module>../de.engelhardt.play.app.feature</module>
 		<module>../de.engelhardt.play.app.product</module>
+		<module>../org.controlsfx</module>
+		<module>../de.engelhardt.play.log4j</module>
 	</modules>
 
 	<repositories>
@@ -39,8 +41,12 @@
 			<layout>p2</layout>
 			<url>http://downloads.efxclipse.org/efxclipse.bestsolution.at/p2-repos/addons/nightly/site/</url>
 		</repository>
-
-	</repositories>
+<!-- 		<repository>
+			<id>Workspace</id>
+			<layout>default</layout>
+			<url>file://home/dieter/git/</url>
+		</repository>
+ -->	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
