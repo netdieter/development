@@ -1,0 +1,47 @@
+package de.engelhardt.play.app;
+
+public class AppModelId {
+	public static final String ADDON_ORG_ECLIPSE_E4_CORE_COMMANDS_SERVICE = "org.eclipse.e4.core.commands.service";
+	public static final String ADDON_ORG_ECLIPSE_E4_UI_CONTEXTS_SERVICE = "org.eclipse.e4.ui.contexts.service";
+	public static final String ADDON_ORG_ECLIPSE_E4_UI_WORKBENCH_ADDONS_HANDLERPROCESSINGADDON = "org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon";
+	public static final String ADDON_ORG_ECLIPSE_E4_UI_WORKBENCH_COMMANDS_MODEL = "org.eclipse.e4.ui.workbench.commands.model";
+	public static final String ADDON_ORG_ECLIPSE_E4_UI_WORKBENCH_CONTEXTS_MODEL = "org.eclipse.e4.ui.workbench.contexts.model";
+	public static final String ADDON_ORG_ECLIPSE_FX_UI_KEYBINDINGS_E4_MODEL = "org.eclipse.fx.ui.keybindings.e4.model";
+	public static final String ADDON_ORG_ECLIPSE_FX_UI_KEYBINDINGS_E4_SERVICE = "org.eclipse.fx.ui.keybindings.e4.service";
+	public static final String APPLICATION_ORG_ECLIPSE_E4_APPLICATION = "org.eclipse.e4.application";
+	public static final String BINDINGCONTEXT_ORG_ECLIPSE_UI_CONTEXTS_DIALOG = "org.eclipse.ui.contexts.dialog";
+	public static final String BINDINGCONTEXT_ORG_ECLIPSE_UI_CONTEXTS_DIALOGANDWINDOW = "org.eclipse.ui.contexts.dialogAndWindow";
+	public static final String BINDINGCONTEXT_ORG_ECLIPSE_UI_CONTEXTS_WINDOW = "org.eclipse.ui.contexts.window";
+	public static final String CATEGORY_DE_ENGELHARDT_PLAY_APP_CATEGORY_COMMON = "de.engelhardt.play.app.category.common";
+	public static final String CATEGORY_DE_ENGELHARDT_PLAY_APP_CATEGORY_PLAY = "de.engelhardt.play.app.category.play";
+	public static final String COMMAND_DE_ENGELHARDT_PLAY_APP_COMMAND_EXITCOMMAND = "de.engelhardt.play.app.command.exitcommand";
+	public static final String COMMAND_DE_ENGELHARDT_PLAY_APP_COMMAND_SWITCHDEFAULT = "de.engelhardt.play.app.command.switchdefault";
+	public static final String COMMAND_DE_ENGELHARDT_PLAY_APP_COMMAND_SWITCHPERSPECTIVEALT = "de.engelhardt.play.app.command.switchperspectivealt";
+	public static final String DIRECTTOOLITEM_DE_ENGELHARDT_PLAY_APP_DIRECTTOOLITEM_DIRECTTOOLITEM = "de.engelhardt.play.app.directtoolitem.directtoolitem";
+	public static final String HANDLEDMENUITEM_DE_ENGELHARDT_PLAY_APP_HANDLEDMENUITEM_EXIT = "de.engelhardt.play.app.handledmenuitem.exit";
+	public static final String HANDLEDMENUITEM_DE_ENGELHARDT_PLAY_APP_HANDLEDMENUITEM_SHAREDITEM_EXIT = "de.engelhardt.play.app.handledmenuitem.shareditem-exit";
+	public static final String HANDLEDTOOLITEM_DE_ENGELHARDT_PLAY_APP_HANDLEDTOOLITEM_HANDLESTOOLITEM = "de.engelhardt.play.app.handledtoolitem.handlestoolitem";
+	public static final String HANDLER_DE_ENGELHARDT_PLAY_APP_HANDLER_1 = "de.engelhardt.play.app.handler.1";
+	public static final String HANDLER_DE_ENGELHARDT_PLAY_APP_HANDLER_EXIT = "de.engelhardt.play.app.handler.exit";
+	public static final String HANDLER_DE_ENGELHARDT_PLAY_APP_HANDLER_SWITCHDEFAULT = "de.engelhardt.play.app.handler.switchdefault";
+	public static final String MENU_DE_ENGELHARDT_PLAY_APP_MENU_0 = "de.engelhardt.play.app.menu.0";
+	public static final String MENU_DE_ENGELHARDT_PLAY_APP_MENU_FILE = "de.engelhardt.play.app.menu.file";
+	public static final String MENU_DE_ENGELHARDT_PLAY_APP_MENU_SHAREDMENUE = "de.engelhardt.play.app.menu.sharedmenue";
+	public static final String PARTSASHCONTAINER_DE_ENGELHARDT_PLAY_APP_PARTSASHCONTAINER_0 = "de.engelhardt.play.app.partsashcontainer.0";
+	public static final String PARTSASHCONTAINER_DE_ENGELHARDT_PLAY_APP_PARTSASHCONTAINER_ALT = "de.engelhardt.play.app.partsashcontainer.alt";
+	public static final String PARTSTACK_DE_ENGELHARDT_PLAY_APP_PARTSTACK_0 = "de.engelhardt.play.app.partstack.0";
+	public static final String PARTSTACK_DE_ENGELHARDT_PLAY_APP_PARTSTACK_1 = "de.engelhardt.play.app.partstack.1";
+	public static final String PARTSTACK_DE_ENGELHARDT_PLAY_APP_PARTSTACK_ALT_BOTTOM = "de.engelhardt.play.app.partstack.alt.bottom";
+	public static final String PARTSTACK_DE_ENGELHARDT_PLAY_APP_PARTSTACK_ALT_TOP = "de.engelhardt.play.app.partstack.alt.top";
+	public static final String PART_DE_ENGELHARDT_PLAY_APP_PART_ALTBOTTOM = "de.engelhardt.play.app.part.altbottom";
+	public static final String PART_DE_ENGELHARDT_PLAY_APP_PART_ALTTOP = "de.engelhardt.play.app.part.alttop";
+	public static final String PART_DE_ENGELHARDT_PLAY_APP_PART_MAINPART = "de.engelhardt.play.app.part.mainpart";
+	public static final String PART_DE_ENGELHARDT_PLAY_APP_PART_PLAYGROUNDCONTROLL = "de.engelhardt.play.app.part.playgroundcontroll";
+	public static final String PERSPECTIVESTACK_DE_ENGELHARDT_PLAY_APP_PERSPECTIVESTACK_PLAY = "de.engelhardt.play.app.perspectivestack.play";
+	public static final String PERSPECTIVE_DE_ENGELHARDT_PLAY_APP_PERSPECTIVE_ALT = "de.engelhardt.play.app.perspective.alt";
+	public static final String PERSPECTIVE_DE_ENGELHARDT_PLAY_APP_PERSPECTIVE_DEFAULTPERSPEKTIVE = "de.engelhardt.play.app.perspective.defaultperspektive";
+	public static final String TOOLBAR_DE_ENGELHARDT_PLAY_APP_TOOLBAR_0 = "de.engelhardt.play.app.toolbar.0";
+	public static final String TOOLCONTROL_DE_ENGELHARDT_PLAY_APP_TOOLCONTROL_SPACER = "de.engelhardt.play.app.toolcontrol.spacer";
+	public static final String TRIMBAR_DE_ENGELHARDT_PLAY_APP_TRIMBAR_0 = "de.engelhardt.play.app.trimbar.0";
+	public static final String TRIMMEDWINDOW_DE_ENGELHARDT_PLAY_APP_TRIMMEDWINDOW_PLAYGROUND = "de.engelhardt.play.app.trimmedwindow.playground";
+}

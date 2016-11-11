@@ -27,6 +27,9 @@
       <children xsi:type="menu:Menu" xmi:id="_7J2rEGb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.menu.file" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_9kVJcGb3EeaWi4TfoDKZNQ" elementId="de.engelhardt.play.app.handledmenuitem.exit" label="Exit" command="_A8rlUGb4EeaWi4TfoDKZNQ"/>
       </children>
+      <children xsi:type="menu:Menu" xmi:id="_YUaSQKhKEea23uznVtsnKg" elementId="de.engelhardt.play.app.menu.sharedmenue" label="SharedMenue">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_a8BNsKhKEea23uznVtsnKg" elementId="de.engelhardt.play.app.handledmenuitem.shareditem-exit" label="Sharedtem-Exit" command="_A8rlUGb4EeaWi4TfoDKZNQ"/>
+      </children>
     </mainMenu>
     <trimBars xmi:id="_J9zJ4GvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LdroQGvBEeapZNljU9P_Eg" elementId="de.engelhardt.play.app.toolbar.0">

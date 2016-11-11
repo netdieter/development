@@ -20,14 +20,19 @@
 		<platform-version>4.2</platform-version>
 		<efx-version>1.0.0</efx-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<speedment.version>3.0.1</speedment.version>
+		<db.groupId>mysql</db.groupId>
+		<db.artifactId>mysql-connector-java</db.artifactId>
+		<db.version>5.1.39</db.version>
 	</properties>
 
 	<modules>
 		<module>../de.engelhardt.play.app</module>
 		<module>../de.engelhardt.play.app.feature</module>
 		<module>../de.engelhardt.play.app.product</module>
-		<module>../org.controlsfx</module>
 		<module>../de.engelhardt.play.log4j</module>
+		<module>../org.controlsfx</module>
 	</modules>
 
 	<repositories>
@@ -41,12 +46,12 @@
 			<layout>p2</layout>
 			<url>http://downloads.efxclipse.org/efxclipse.bestsolution.at/p2-repos/addons/nightly/site/</url>
 		</repository>
-<!-- 		<repository>
+		<repository>
 			<id>Workspace</id>
 			<layout>default</layout>
 			<url>file://home/dieter/git/</url>
 		</repository>
- -->	</repositories>
+	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -121,15 +126,15 @@
 					</executions>
 				</plugin>
 				<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<archive>
-						<addMavenDescriptor>false</addMavenDescriptor>
-					</archive>
-				</configuration>
-			</plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -158,5 +163,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 </project>
