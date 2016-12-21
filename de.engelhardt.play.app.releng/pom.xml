@@ -33,6 +33,7 @@
 		<module>../de.engelhardt.play.app.product</module>
 		<module>../de.engelhardt.play.log4j</module>
 		<module>../org.controlsfx</module>
+		<module>../org.mariadb.jdbc</module>
 	</modules>
 
 	<repositories>
