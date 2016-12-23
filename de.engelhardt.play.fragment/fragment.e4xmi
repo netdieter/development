@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_gsSGsKhLEea23uznVtsnKg">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_YnWGQKhTEeaKiZIzKC4U-A" featurename="children" parentElementId="de.engelhardt.play.app.menu.sharedmenue" positionInList="after:de.engelhardt.play.app.handledmenuitem.shareditem-exit">
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_fDMIUKhTEeaKiZIzKC4U-A" elementId="de.engelhardt.play.fragment.handledmenuitem.fragmentmenueitem" label="Fragment Menue Item" command="_u-w6kKhbEeaKiZIzKC4U-A"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_nkqggKhbEeaKiZIzKC4U-A" featurename="commands" parentElementId="org.eclipse.e4.application">
+    <elements xsi:type="commands:Command" xmi:id="_u-w6kKhbEeaKiZIzKC4U-A" elementId="de.engelhardt.play.fragment.command.fragmentcommand" commandName="FragmentCommand"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_EJZsUKhcEeaKiZIzKC4U-A" featurename="handlers" parentElementId="org.eclipse.e4.application">
+    <elements xsi:type="commands:Handler" xmi:id="_Gq6m0KhcEeaKiZIzKC4U-A" elementId="de.engelhardt.play.fragment.handler.0" contributionURI="bundleclass://de.engelhardt.play.fragment/de.engelhardt.play.fragment.handlere.FragmentHandler" command="_u-w6kKhbEeaKiZIzKC4U-A"/>
+  </fragments>
+</fragment:ModelFragments>

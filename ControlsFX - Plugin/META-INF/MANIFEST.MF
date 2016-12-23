@@ -3,7 +3,6 @@ Bundle-ManifestVersion: 2
 Bundle-Name: ControlsFX-Plugin
 Bundle-SymbolicName: org.controlsfx
 Bundle-Version: 1.0.0
-Bundle-ClassPath: controlsfx-8.40.11.jar
 Export-Package: impl.org.controlsfx,
  impl.org.controlsfx.autocompletion,
  impl.org.controlsfx.behavior,
@@ -31,3 +30,4 @@ Export-Package: impl.org.controlsfx,
  org.controlsfx.validation,
  org.controlsfx.validation.decoration
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ClassPath: controlsfx-8.40.12.jar
